@@ -1,0 +1,77 @@
+NLW_HEAT
+
+==============================================================================================================================================
+--------------------------------------------------------------ERRO 1---------------------------------------------------------------------------------------
+==============================================================================================================================================
+
+
+
+
+
+ERRO DE TIPAGEM....
+
+n chega ser erro de tipagem
+so n tinha um tratamento pro undefined
+aquela string/variavel que eu fiz foi o tratamento da tipagem 
+aquele strict basicamente confia que todos os valores serão preenchidos
+se tiver false ele vai deixar passar tudo
+como se tivesse algum valor
+
+
+
+    const JWT_SECRET = process.env.JWT_SECRET || "JWT_SECRET";
+
+    //const JWT_SECRET = process.env.JWT_SECRET || "JWT_SECRET";
+    //console.log(JWT_SECRET);
+
+
+    console.log(JWT_SECRET);
+
+no arquivo TS.CONFIG.JSON FALTOU COLOCAR ESTA CONFIGURAÇÃO:
+
+    "strict": false,    
+	
+	
+	
+    const token = sign(
+      {
+        user: {
+          name: user.name,
+          avatar_ur: user.avatar_url,
+          id: user.id,
+        },
+      },
+
+      process.env.JWT_SECRET,
+
+      {
+        subject: user.id,
+        expiresIn: "1d",
+      }
+    );
+	
+	
+	
+	
+	
+	
+==============================================================================================================================================
+--------------------------------------------------------------ERRO 2---------------------------------------------------------------------------------------
+==============================================================================================================================================
+    mostra seu createmessageService
+	é com underline ;-;
+	
+	
+	io.emit("new_message", infoWS);
+	
+	
+	A causa do erro foi na declaração do método, onde foi utilizado um nome sem underline (new message) 
+	A correção se deu inserindo a aspas no lugar do espaço.
+	
+	O problema poderia ter sido evitado conferindo os nomes entre aspas. Estes, não são sugeridos para correção.
+
+
+==============================================================================================================================================
+--------------------------------------------------------------ERRO 3---------------------------------------------------------------------------------------
+==============================================================================================================================================
+	
